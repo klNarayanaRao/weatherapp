@@ -13,6 +13,8 @@ try {
     
     // updating data in card when "Search" button is clicked
     button.addEventListener('click',async () => {
+        console.log('button clicked')
+        console.log('city.value')
         let resultData = await fetchdata(city.value);
         displaySearchData(resultData);
         cityname.textContent = city.value // update heading
@@ -35,7 +37,7 @@ function getFrequentCityData() {
 
 function updateTable(cityName, results) {
   // This function creates a new row in the table and add's a new row
-  console.log(frequentCityTable);
+  // console.log(frequentCityTable);
   let row = frequentCityTable.insertRow(1);
   row.innerHTML = `<th>${cityName}</th>
   <td>${results["temp"]}°C</td>
