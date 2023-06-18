@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WEATHER REPORT</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><b>Weather Report</b></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+           
+            
+            
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              id="city-text"
+            />
+            <button class="btn btn-outline-success" type="submit" id="search-button">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="4 text-center">Weather of <span  id="city-name">Your city</span></h1>
+      <main>
+        <div class="row row-cols-1 row-cols-md-2 mb-3 text-center">
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">TEMPERATURE</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"><span id="temp2"></span><small class="text-body-secondary fw-light"><sup>o</sup>C</sup></small></h1>
+                
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Temperature is <span id="temp"></span> </li>
+                  <li>Maximum Temp is <span id="max_temp"</span></li>
+                  <li>Minimum Temp is <span id="min_temp"</span></li>
+                  <li>Feels Like <span id="feels_like"</span></li>
+                </ul>
+               
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">WIND</h4>
+              </div>
+              <div class="card-body">
+                
+                <ul class="list-unstyled mt-3 mb-4">
+                <h1 class="card-title pricing-card-title"><span id="wind_speed2"></span><small class="text-body-secondary fw-light">km/hr</small></h1>
+
+                  <li>Wind Speed is <span id="wind_speed"></span></li>
+                  <li>Wind Degrees <span id="wind_degrees"></span></li>
+                  <li>Humidity is <span id="humidity"></span></li>
+                  
+                </ul>
+                
+              </div>
+              
+            </div>
+            
+          </div>
+          
+          
+        </div>
+
+        <h2 class="display-6 text-center mb-4">Frequently Searched</h2>
+
+        <div class="table-responsive">
+          <table class="table text-center" id="frequent-city-table">
+            <thead>
+              <tr>
+                <th style="width: 30%"></th>
+                <th style="width: 22%">TEMP</th>
+                <th style="width: 22%">Feels_like</th>
+                <th style="width: 22%">Humidity</th>
+                <th style="width: 22%">Min_temp</th>
+                <th style="width: 22%">Max_temp</th>
+                <th style="width: 22%">Wind_speed</th>
+                <th style="width: 22%">Wind_degrees</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Table's body is empty, details will be filled from JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script1.js"></script>
+  </body>
+</html>
